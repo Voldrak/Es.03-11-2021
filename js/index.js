@@ -6,13 +6,11 @@ const render = (container, items) => {
             return `<li> 
         <input type="checkbox" name="completed" class="completed" disabled value="completed" checked >
         <label>${element.title}</label>
-        ${element.completed}
         </li>`
         } else {
             return `<li> 
         <input type="checkbox" name="completed" class="completed" value="completed" disabled>
         <label>${element.title}</label>
-        ${element.completed}
         </li>`
         }
 
@@ -23,7 +21,7 @@ const render = (container, items) => {
     const poppete = document.querySelector(".popitem");
     poppete.addEventListener("click", () => {
         elements.pop();
-        
+
         const content = elements.join('');
 
         container.innerHTML = content;
